@@ -1,0 +1,28 @@
+<td *ngFor="let item of data">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{item.title}}</mat-card-title>
+      <mat-card-subtitle>{{item.departement}}</mat-card-subtitle>
+      
+    </mat-card-header>
+    <img mat-card-image src="{{item.image}}" >
+    <mat-card-content>
+      
+        <div style="font-weight: bold;">Start date :</div> {{item.start_date}}
+        <div style="font-weight: bold;">end date :</div>  {{item.end_date}}
+        <div style="font-weight: bold;">Location :</div> {{item.location}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="participate()">Participate</button>
+    </mat-card-actions>
+  </mat-card>
+  
+
+</td>
+<div *ngIf="div1">
+  
+  <qrcode [qrdata]="myAngularxQrCode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+</div>
+
+  
